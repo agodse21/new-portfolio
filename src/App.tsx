@@ -4,7 +4,7 @@ function App() {
  
   return (
    <div>
-    <h1 className="text-red-800">sjbs</h1>
+    <h1 className="text-red-800">set up</h1>
    </div>
   )
 }
