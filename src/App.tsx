@@ -8,6 +8,7 @@ function App() {
     <nav>oky</nav>
     <h1>heading</h1>
     <div>home</div>
+    <div>about</div>
    </div>
   )
 }
