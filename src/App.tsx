@@ -1,7 +1,9 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
-import { BiUpArrowCircle } from "react-icons/bi";
+import { BiLogoGmail, BiUpArrowCircle } from "react-icons/bi";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FiGithub } from "react-icons/fi";
 import { HiMenuAlt2 } from "react-icons/hi";
 import "./App.css";
 import About from "./components/about";
@@ -56,7 +58,12 @@ function App() {
       >
         <HiMenuAlt2 color={"#06223f"} className="text-[35px] font-bold" />
       </button>
-
+      <div className="fixed bottom-0 flex flex-col items-center gap-2 left-5 z-10 rounded-lg">
+        <FaLinkedinIn className="size-7" />
+        <FiGithub className="size-7" />
+        <BiLogoGmail className="size-7" />
+        <div className="w-[1px] h-32 bg-black"></div>
+      </div>
       {visible && (
         <button
           className="fixed bottom-10  right-12 z-10 rounded-lg bg-gray-200"
@@ -69,9 +76,7 @@ function App() {
           />
         </button>
       )}
-
       <Navbar isOpen={isOpen} />
-
       <Home />
       <About />
       <WorkExprience />
@@ -79,7 +84,6 @@ function App() {
       <Testimonials />
       <Skills />
       <Contact />
-
       <div
         id="skills"
         className="p-5 flex justify-center gap-2 items-center flex-col w-full"
