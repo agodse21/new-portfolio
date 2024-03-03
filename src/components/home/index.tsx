@@ -1,10 +1,8 @@
 import { Button, HStack, VStack } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import { typeWritterStrings } from "../../lib/utils";
 
 export default function Home() {
-  const navigate = useNavigate();
   return (
     <div
       className="h-[100vh] relative w-full grid mt-0"
@@ -40,20 +38,19 @@ export default function Home() {
             </span>
           </HStack>
           <HStack justify={"end"} className="w-[60%] mt-7">
-            <Button
-              onClick={() => {
-                navigate("#contact");
-              }}
-              border="2px"
-              borderColor="#06223f"
-              variant={"outline"}
-              style={{
-                borderRadius: "12px 2px 30px 8px",
-              }}
-              className="py-6 w-32"
-            >
-              Hire Me
-            </Button>
+            <a href="#contact" className="text-primary">
+              <Button
+                border="2px"
+                borderColor="#06223f"
+                variant={"outline"}
+                style={{
+                  borderRadius: "12px 2px 30px 8px",
+                }}
+                className="py-6 w-32"
+              >
+                Hire Me
+              </Button>
+            </a>
           </HStack>
         </VStack>
       </div>
