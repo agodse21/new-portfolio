@@ -46,7 +46,7 @@ export default function Home() {
                 style={{
                   borderRadius: "12px 2px 30px 8px",
                 }}
-                className="py-6 w-32"
+                className="py-6 w-32  hover:scale-110 duration-200"
               >
                 Hire Me
               </Button>
