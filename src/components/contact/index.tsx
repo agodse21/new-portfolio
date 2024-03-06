@@ -119,6 +119,7 @@ export default function Contact() {
               cursor: "pointer",
               fontWeight: 600,
             }}
+            className="hover:scale-110 duration-200"
             value="Send"
           >
             {loading ? <Spinner /> : "Send"}
@@ -130,9 +131,9 @@ export default function Contact() {
             to={"mailto:agodse9@gmail.com"}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-3"
+            className="flex items-center gap-3 "
           >
-            <HiOutlineMail className="size-8" />
+            <HiOutlineMail className="size-8 hover:scale-125 duration-200" />
             <span>agodse9@gmail.com</span>
           </Link>
           <Link
@@ -141,7 +142,7 @@ export default function Contact() {
             rel="noreferrer"
             className="flex items-center gap-3"
           >
-            <ImGithub className="size-8" />
+            <ImGithub className="size-8 hover:scale-125 duration-200" />
             <span>agodse21</span>
           </Link>
 
@@ -153,7 +154,7 @@ export default function Contact() {
             rel="noreferrer"
             className="flex items-center gap-3"
           >
-            <FaWhatsapp className="size-8" />
+            <FaWhatsapp className="size-8 hover:scale-125 duration-200" />
             <span>09860672023</span>
           </Link>
 
@@ -163,7 +164,7 @@ export default function Contact() {
             rel="noreferrer"
             className="flex items-center gap-3"
           >
-            <FaLinkedin className="size-8" />
+            <FaLinkedin className="size-8 hover:scale-125 duration-200" />
             <span>amol-godse-patil</span>
           </Link>
         </div>
