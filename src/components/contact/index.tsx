@@ -43,7 +43,7 @@ export default function Contact() {
         .sendForm(
           "service_ni42gpi",
           "template_vhl15p5",
-          form.current,
+          form.current as HTMLFormElement,
           "-aEsO9Cy5cXe58Gfw"
         )
         .then((result: { status: number; text: string }) => {
