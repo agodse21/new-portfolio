@@ -1,6 +1,5 @@
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect, useState } from "react";
+import { IconButton } from "@chakra-ui/react";
+import { useState } from "react";
 import { BiLogoGmail, BiUpArrowCircle } from "react-icons/bi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
@@ -18,11 +17,6 @@ import WorkExprience from "./components/work-exprience";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
@@ -50,7 +44,7 @@ function App() {
       }}
     >
       <button
-        className="fixed top-10  left-12 z-10 rounded-lg bg-gray-200"
+        className="fixed top-10  hover:scale-125 duration-200 left-12 z-10 rounded-lg bg-gray-200"
         aria-label="Open Navbar"
         onClick={() => {
           setIsOpen(!isOpen);
@@ -58,15 +52,32 @@ function App() {
       >
         <HiMenuAlt2 color={"#06223f"} className="text-[35px] font-bold" />
       </button>
-      <div className="fixed bottom-0 flex flex-col items-center gap-2 left-5 z-10 rounded-lg">
-        <FaLinkedinIn className="size-7" />
-        <FiGithub className="size-7" />
-        <BiLogoGmail className="size-7" />
-        <div className="w-[1px] h-32 bg-black"></div>
-      </div>
+
+      {/* Hiden section */}
+      {false && (
+        <div className="fixed bottom-0 flex flex-col items-center gap-2 left-5 z-10 rounded-lg">
+          <IconButton aria-label="linkedin">
+            <FaLinkedinIn className="size-7" />
+          </IconButton>
+          <IconButton aria-label="github">
+            <FiGithub className="size-7" />
+          </IconButton>
+          <IconButton
+            aria-label="gmail"
+            style={{
+              borderRadius: "50%",
+            }}
+          >
+            <BiLogoGmail className="size-7" />
+          </IconButton>
+          <div className="w-[1px] h-32 bg-black"></div>
+        </div>
+      )}
+
+      {/* Scroll to top */}
       {visible && (
         <button
-          className="fixed bottom-10  right-12 z-10 rounded-lg bg-gray-200"
+          className="fixed bottom-10  right-12 z-10 rounded-lg hover:scale-125 duration-200 bg-gray-200"
           aria-label="Scroll-top"
           onClick={scrollToTop}
         >
