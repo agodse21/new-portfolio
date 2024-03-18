@@ -61,12 +61,12 @@ export default function Home() {
       />
 
       <div
-        className="w-full h-full"
+        className="w-full h-full flex justify-center"
         style={{
           backgroundImage: "linear-gradient(180deg,#B6CCF5 .48%,#D5E3F1 100%)",
         }}
       >
-        <div className="rotate-90 absolute top-[40%] right-[-8%]">
+        <div className="w-full h-[75%] mt-14 overflow-hidden rotate-90">
           <span className="text-[#EAF2FA] text-[3.75rem] uppercase font-extrabold tracking-wide">
             Amol
           </span>
